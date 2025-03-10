@@ -1,0 +1,278 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: #ffeaed;
+  opacity: 0.7;
+  background-image:  radial-gradient(#D56976 0.5px, transparent 0.5px), radial-gradient(#D56976 0.5px, #ffeaed 0.5px);
+  background-size: 18px 18px;
+  background-position: 0 0,9px 9px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.decoration {
+  width: 80%;
+  min-height: 100px;
+  min-width: 600px;
+  max-width: 700px;
+  border-radius: 10px;
+  margin: 30px auto 0px;
+  padding: 40px 30px 0px;
+}
+
+.character-container {
+  position: relative;
+  width: 100%;
+  /* Adjust width to fit your design */
+  height: 200px;
+  /* Adjust height to fit your design */
+  margin-bottom: -5px;
+  /* Overlap the todo-list */
+  display: flex;
+  justify-content: center;
+  /* Center the image */
+  align-items: flex-end;
+  /* Align image to the bottom */
+  z-index: 1;
+  /* Ensure it's above the todo-list */
+}
+
+.character {
+max-width: 200px;
+/* Adjust image size */
+max-height: 200px;
+/* Adjust image size */
+position: relative;
+bottom: 0px;
+/* Adjust to make it look like standing */
+}
+
+.speech-bubble {
+position: absolute;
+top: 20px;
+/* Adjust vertical position */
+left: 50%;
+/* Start from the center */
+transform: translateX(-50%);
+/* Center the bubble */
+background: white;
+border-radius: 20px;
+padding: 10px 20px;
+font-size: 14px;
+color: #333;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+z-index: 2;
+/* Ensure it's above the image */
+}
+
+.speech-bubble::before {
+content: '';
+position: absolute;
+bottom: -10px;
+/* Position the pointer */
+left: 50%;
+transform: translateX(-50%);
+border-width: 10px 10px 0 10px;
+border-style: solid;
+border-color: white transparent transparent transparent;
+/* White pointer */
+}
+
+.todo-list {
+  width: 80%;
+  min-height: 100px;
+  min-width: 600px;
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0px auto 20px;
+  padding: 40px 30px 30px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list h1 {
+  text-align: center;
+  color: #1C1C1C;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.left-group {
+  display: flex;
+  gap: 7.5px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-left: #555 solid 1px;
+  padding-left: 7.5px;
+  font-size: 14px;
+}
+
+select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #CB595D;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ul {
+  background-color: #FFFCFC;
+  border: #CB595D solid 2px;
+  padding: 10px 8px 10px 10px;
+  margin-bottom: 10px;
+
+} */
+ul {
+  margin-bottom: 10px;
+}
+
+.cat1 li {
+  background-color: #FFBCC4;
+}
+
+.cat2 li {
+  background-color: #DCB07A;
+}
+
+.cat3 li {
+  background-color: #C4D4FA;
+}
+
+.cat4 li {
+  background-color: #CCCEB7;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-image: url(images/unchecked.png); /* Image from Flaticon by Apien Flat */
+  background-size: cover;
+  background-position: center;
+  bottom: 8px;
+  left: 10px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png); /* Image from Flaticon by Muhazdinata Outline */
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 1.5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 30%;
+}
+
+.cat1 li span:hover {
+  background: #CB595D;
+  color: #edeef0;
+}
+
+.cat2 li span:hover {
+  background: #98673F;
+  color: #edeef0;
+}
+
+.cat3 li span:hover {
+  background: #2B50A5;
+  color: #edeef0;
+}
+
+.cat4 li span:hover {
+  background: #595A4E;
+  color: #edeef0;
+}
+
+.progress-container {
+  padding-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.cur_progress {
+  width: 0px;
+  height: 30px;
+  background-color: #4caf50;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+  color: #edeef0;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.progress-container h3 {
+  font-size: 16px;
+  font-weight: 100px;
+  color: #1C1C1C;
+}
+
+.progress-container p {
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="UTF-8" />
+            <title>Chopper To Do List</title>
+            <link rel="stylesheet" href="index.css" />
+          </head>
+    </head>
+    <body>
+        <div class="background">
+            <div class="decoration">
+                <div class="character-container">
+                    <img src="images/chopper-pixel.gif">
+                    <div class="speech-bubble">
+                        <span id="chopper-message">What do you need to do today? 🍭</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-list">
+                <h1>TO DO LIST</h1>
+
+                <div class="row">
+                    <div class="left-group">
+                        <select id="categories">
+                            <option value="urgent-important">Urgent and Important</option>
+                            <option value="urgent-not-important">Urgent and Not Important</option>
+                            <option value="not-urgent-important">Not Urgent and Important</option>
+                            <option value="not-urgent-not-important">Not Urgent and Not Important</option>
+                        </select>
+
+                        <input type="text" id="task-input" placeholder="Add a new task...">
+                    </div>
+
+                    <div class="right-group">
+                        <button onclick="addTask()" id="add_btn">Add</button>
+                    </div>
+                </div>
+
+                <ul id="urgent-important" class="cat1"></ul>
+                <ul id="urgent-not-important" class="cat2"></ul>
+                <ul id="not-urgent-important" class="cat3"></ul>
+                <ul id="not-urgent-not-important" class="cat4"></ul>
+
+                <div class="progress-container">
+                    <h3>Progress:</h3>
+                    <div class="progress-bar">
+                        <div class="cur_progress"><span id="progress-text"></span></div>
+                    </div>
+                    <p>Task: <span id="completed-tasks">0</span> / <span id="total-tasks">0</span> completed</p>
+                </div>
+            </div>
+        </div>
+        <script src="render.js"></script>
+    </body>
+</html>
